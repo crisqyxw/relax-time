@@ -26,6 +26,7 @@ public:
     void DrawBackground();
     QProcess *curl=new QProcess;
     void refresh();
+    void keyPressEvent(QKeyEvent *event);
     int Pic=1;
     QLabel *BgLabel=new QLabel(this);
     QImage currentWallpaper;

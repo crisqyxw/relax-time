@@ -4,12 +4,15 @@
 #include <QtConcurrent>
 #include <QRandomGenerator>
 #include <QScreen>
+#include <QKeyEvent>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    this->setFocusPolicy(Qt::StrongFocus);
+    Pic=QRandomGenerator().global()->bounded(1,18);
     refresh();
 }
 
@@ -27,7 +30,14 @@ p.drawPixmap(rect(),QPixmap(":/backgrounds/backgrounds/"+num+".jpg"),QRect());
 */
 QString Widget::getTextFromYiYan()
 {
-    curl->start("curl https://v1.hitokoto.cn/?encode=text\"");
+    if (ui->radioButton->isChecked())
+    {
+        curl->start("curl https://v1.hitokoto.cn/?encode=text&c=i\"");
+    }
+    else
+    {
+        curl->start("curl https://v1.hitokoto.cn/?encode=text\"");
+    }
     curl->waitForFinished();
     //ui->label->setText(curl->readAllStandardOutput().simplified());
     QString YiYan=curl->readAllStandardOutput().simplified();
@@ -35,7 +45,7 @@ QString Widget::getTextFromYiYan()
 }
 void Widget::refresh()
 {
-    ui->YiYanText->setText("");
+    ui->YiYanText->setText("Loading...");
     QtConcurrent::run([=](){
             ui->YiYanText->setText(getTextFromYiYan());
     });
@@ -60,7 +70,7 @@ QString Widget::getRandNum()
     /*int num=QRandomGenerator::global()->bounded(1,4);
     QString numToString=QString::number(num);
     return numToString;*/
-    if (Pic<7)
+    if (Pic<18)
     {
         Pic++;
     }
@@ -73,9 +83,27 @@ QString Widget::getRandNum()
 void Widget::DrawBackground()
 {
     num=getRandNum();
-    currentWallpaper.load(":/backgrounds/backgrounds/"+num+".jpg");
+    currentWallpaper.load("./backgrounds/"+num+".jpg");
     BgLabel->setScaledContents(true);
     BgLabel->setPixmap(QPixmap().fromImage(currentWallpaper));
     BgLabel->resize(screenRect.width(),screenRect.height());
     //BgLabel->show();
+}
+void Widget::keyPressEvent(QKeyEvent *event){
+    if(event->key() == Qt::Key_R){
+        refresh();
+    }
+    if(event->key() == Qt::Key_Escape){
+        this->close();
+    }
+    if(event->key() == Qt::Key_S){
+        ui->refreshBtn->show();
+        ui->exitBtn->show();
+        ui->radioButton->show();
+    }
+    if(event->key() == Qt::Key_H){
+        ui->refreshBtn->hide();
+        ui->exitBtn->hide();
+        ui->radioButton->hide();
+    }
 }
