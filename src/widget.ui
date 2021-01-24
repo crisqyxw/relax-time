@@ -17,28 +17,31 @@
    <string notr="true">background-color: rgb(0, 0, 0);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="1">
-    <widget class="QLabel" name="YiYanText">
+   <item row="3" column="1">
+    <widget class="QPushButton" name="refreshBtn">
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      <string notr="true">QPushButton {
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 170);
+border:none 
+}
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 190);
+border:none 
+}
+QPushButton:pressed
+{
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 255);
+border:none 
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>刷新</string>
      </property>
     </widget>
-   </item>
-   <item row="2" column="1">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item row="0" column="0" rowspan="5">
     <spacer name="horizontalSpacer">
@@ -53,6 +56,30 @@
      </property>
     </spacer>
    </item>
+   <item row="2" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="YiYanText">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="1">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
@@ -66,24 +93,26 @@
      </property>
     </spacer>
    </item>
-   <item row="3" column="1">
-    <widget class="QPushButton" name="refreshBtn">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255, 0);
-color: rgba(255, 255, 255, 200);
-border:none</string>
-     </property>
-     <property name="text">
-      <string>刷新</string>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="1">
     <widget class="QPushButton" name="exitBtn">
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255, 0);
-color: rgba(255, 255, 255, 200);
-border:none</string>
+      <string notr="true">QPushButton {
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 170);
+border:none 
+}
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 190);
+border:none 
+}
+QPushButton:pressed
+{
+background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 255);
+border:none 
+}</string>
      </property>
      <property name="text">
       <string>退出</string>

@@ -4,6 +4,11 @@
 #include <QWidget>
 #include <QPaintEvent>
 #include <QProcess>
+#include <QLabel>
+#include <QImage>
+#include <QScreen>
+#include <QDesktopWidget>
+#include <QApplication>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -16,11 +21,18 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-    void paintEvent(QPaintEvent *event);
+    //void paintEvent(QPaintEvent *event);
     QString getTextFromYiYan();
+    void DrawBackground();
     QProcess *curl=new QProcess;
     void refresh();
-    QPixmap currentWallpaper;
+    int Pic=1;
+    QLabel *BgLabel=new QLabel(this);
+    QImage currentWallpaper;
+    QString getRandNum();
+    QString num;
+    //QScreen *screen = QGuiApplication::primaryScreen ();
+    QRect screenRect = QApplication::desktop()->screenGeometry();
 
 private slots:
     void on_refreshBtn_clicked(bool checked);
