@@ -1,5 +1,5 @@
 # Relax-time
-![介绍](https://gitee.com/qygw/relax-time/raw/master/screenshot/%E4%BB%8B%E7%BB%8D.png)
+![介绍](https://storage.deepin.org/thread/202101242152268996_%E4%BB%8B%E7%BB%8D.png)
 #### 介绍
 一款使用qt开发的屏保工具，使用一言API。
 代码很垃圾，大佬们轻喷。
@@ -13,12 +13,10 @@ make
 ```
 
 #### 截图
-![1](screenshot/screenshot1.png)
-![2](screenshot/screenshot2.png)
-![3](screenshot/screenshot3.png)
-![4](screenshot/screenshot4.png)
-![5](screenshot/screenshot5.png)
-![6](screenshot/screenshot6.png)
+![1](https://storage.deepin.org/thread/202101250956315561_screenshot1.png)
+![2](https://storage.deepin.org/thread/202101250957052804_screenshot2.png)
+![3](https://storage.deepin.org/thread/202101250957266685_screenshot4.png)
+![4](https://storage.deepin.org/thread/202101250957371509_screenshot6.png)
 
 
 #### 使用说明
@@ -30,7 +28,7 @@ make
 
 eg:
 
-![7](screenshot/screenshot7.png)
+![骚操做](https://storage.deepin.org/thread/202101251000241215_screenshot7.png)
      
 
 #### 参与贡献
