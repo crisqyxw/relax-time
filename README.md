@@ -13,10 +13,12 @@ make
 ```
 
 #### 截图
-![1](https://storage.deepin.org/thread/202101250956315561_screenshot1.png)
-![2](https://storage.deepin.org/thread/202101250957052804_screenshot2.png)
-![3](https://storage.deepin.org/thread/202101250957266685_screenshot4.png)
-![4](https://storage.deepin.org/thread/202101250957371509_screenshot6.png)
+![1](screenshots/screenshot1.png)
+![2](screenshots/screenshot2.png)
+![3](screenshots/screenshot3.png)
+![4](screenshots/screenshot4.png)
+![5](screenshots/screenshot5.png)
+![6](screenshots/screenshot6.png)
 
 
 #### 使用说明
@@ -28,7 +30,7 @@ make
 
 eg:
 
-![骚操做](https://storage.deepin.org/thread/202101251000241215_screenshot7.png)
+![骚操作](screenshots/screenshot7.png)
      
 
 #### 参与贡献
