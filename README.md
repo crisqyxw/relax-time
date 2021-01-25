@@ -1,5 +1,5 @@
 # Relax-time
-![介绍](screenshot/介绍.png)
+![介绍](https://gitee.com/qygw/relax-time/raw/master/screenshot/介绍.png)
 #### 介绍
 一款使用qt开发的屏保工具，使用一言API。
 代码很垃圾，大佬们轻喷。
