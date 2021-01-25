@@ -1,5 +1,4 @@
 # Relax-time
-![介绍](https://storage.deepin.org/thread/202101242152268996_%E4%BB%8B%E7%BB%8D.png)
 #### 介绍
 一款使用qt开发的屏保工具，使用一言API。
 代码很垃圾，大佬们轻喷。
