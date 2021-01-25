@@ -32,6 +32,7 @@ public:
     QImage currentWallpaper;
     QString getRandNum();
     QString num;
+    void setAuther(QString from,QString fromWho);
     //QScreen *screen = QGuiApplication::primaryScreen ();
     QRect screenRect = QApplication::desktop()->screenGeometry();
 
